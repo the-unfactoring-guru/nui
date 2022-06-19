@@ -1,5 +1,4 @@
 import {Box} from '@mui/material';
-import { LogSection } from './components/LogSection';
 import { SearchSection } from './components/SearchSection';
 import { TopBar } from './components/TopBar';
 function App() {
@@ -15,7 +14,6 @@ function App() {
     >
         <TopBar/>
         <SearchSection/>
-        <LogSection/>
     </Box>
   );
 }
