@@ -1,6 +1,8 @@
 import {Box} from '@mui/material';
 import { SearchSection } from './components/SearchSection';
 import { TopBar } from './components/TopBar';
+import './index.css';
+
 function App() {
   return (
     <Box
