@@ -5,7 +5,8 @@ import { Box,
   List,
   ListItem,
   Divider, 
-  ListItemButton } from '@mui/material'
+  ListItemButton, 
+  ListItemText} from '@mui/material'
 import { Search } from '@mui/icons-material';
 
 export const SearchSection = () => {
@@ -17,7 +18,7 @@ export const SearchSection = () => {
             border: "1px solid black",
             backgroundColor: "#f0f0f0",
             width: 167,
-            height: 483,
+            height: 482,
             top: 117,
         }}
     >
@@ -39,7 +40,7 @@ export const SearchSection = () => {
             paddingTop: "10px"
           }}/>
         
-        <Button startIcon= {<Search/>} sx={{
+        <Button variant="contained" startIcon= {<Search/>} sx={{
             position: "relative",
             height: 25,
             color: "black",
@@ -53,19 +54,19 @@ export const SearchSection = () => {
         </Button>
 
         <List sx={{
+          overflow: "auto",
           padding: 0,
           backgroundColor: "#fff",
           marginTop: "30px",
-          width: 140,
           height: 250,
           }} dense>
           {
             packageList.map((element) => {
               return(
                 <div>
-                  <ListItem>
+                  <ListItem disablePadding>
                     <ListItemButton>
-                      {element}
+                      <ListItemText primary={element}/>
                     </ListItemButton>
                   </ListItem>
                   <Divider/>
